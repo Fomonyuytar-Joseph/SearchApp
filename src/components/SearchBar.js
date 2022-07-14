@@ -4,9 +4,14 @@ import React, { Component } from 'react'
 export class SearchBar extends Component {
   render() {
     return (
-      <form>
+      <div className='ui segment'>
+      <form className='ui form'>
+        <div className='field'>
+          <label>Image Search </label>
         <input type='text'/>
+        </div>
       </form>
+      </div>
     )
   }
 }
