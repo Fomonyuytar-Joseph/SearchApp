@@ -1,8 +1,14 @@
 import React from 'react'
 
-function ImageList() {
+function ImageList({images}) {
+   const displayImages =  images.map((image)=>{
+
+        return <img src={image.urls.regular} alt='' />
+
+    })
+    
   return (
-    <div>ImageList</div>
+    <div>{displayImages}</div>
   )
 }
 

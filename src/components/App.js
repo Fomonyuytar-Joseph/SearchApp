@@ -15,7 +15,7 @@ class App extends Component {
       params: { query: term },
      
     })
-      console.log(response.data.results)
+      
 
       this.setState({ images :response.data.results} )
 
@@ -27,7 +27,8 @@ class App extends Component {
     return (
       <div className="ui container" style={{ marginTop: "10px" }}>
         <SearchBar onSubmit={this.onSearchSubmit} />
-        <ImageList/>
+
+        <ImageList images={this.state.images}/>
       </div>
     );
   }
