@@ -3,7 +3,7 @@ import React from 'react'
 function ImageList({images}) {
    const displayImages =  images.map((image)=>{
 
-        return <img src={image.urls.regular} alt='' />
+        return <img key={image.id} src={image.urls.regular} alt={image.description} />
 
     })
     
